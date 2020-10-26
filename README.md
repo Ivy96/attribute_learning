@@ -51,14 +51,12 @@ cd <caffe-home>
 make pycaffe
 
 Another guide for caffe installation : http://installing-caffe-the-right-way.wikidot.com/start
-###################################################################
 
-Dataset:
+# Dataset:
 Download Imagenet attribute dataset from http://image-net.org/index
 Extract the images in a directory named "imagenet_attrib/orig"
 Download the attribute annotation file attrann.mat from http://image-net.org/download-attributes
 Use the split_annotation function from project_root/code/prepare_data.py to split it into 4 smaller annotation files.
-###################################################################
 
 # Prepare dataset:
 ## Preprocessing image files
