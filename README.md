@@ -69,7 +69,8 @@ train/val/test list files will be created in <project_root>/data/
 ./create_data_lmdb.sh DS=ia LMDBFILE_PATH=/home/soubarna/Workspace/attribute_attention/attribute_learning/data2 ANNFILE_PATH=/home/soubarna/Workspace/attribute_attention/attribute_learning/data2 CAFFE_TOOL_PATH=/home/soubarna/Softwares/caffe-master/build/tools DATA_ROOT=/home/soubarna/Workspace/datasets/atttribute_attention/datasets/imagenet_attrib/cropped_to_bbox/
 
 LMDB files will be created in <project_root>/data/
-###################################################################
+
+
 # Train model Deep Attribute Network (DAN)
 
 python train_attribute_network.py
