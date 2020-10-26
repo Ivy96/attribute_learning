@@ -63,10 +63,11 @@ Use the split_annotation function from project_root/code/prepare_data.py to spli
 python prepare_data.py --data_root <PATH_TO_imagenet_attrib/imagenet_attrib/> --task 1
 
 train/val/test list files will be created in <project_root>/data/
+preprocessed image will be saved in <PATH_TO_imagenet_attrib/imagenet_attrib/cropped_to_bbox>
 
 ## Create data lmdb file
 
-./create_data_lmdb.sh DS=ia LMDBFILE_PATH=/home/soubarna/Workspace/attribute_attention/attribute_learning/data2 ANNFILE_PATH=/home/soubarna/Workspace/attribute_attention/attribute_learning/data2 CAFFE_TOOL_PATH=/home/soubarna/Softwares/caffe-master/build/tools DATA_ROOT=/home/soubarna/Workspace/datasets/atttribute_attention/datasets/imagenet_attrib/cropped_to_bbox/
+./create_data_lmdb.sh DS=ia LMDBFILE_PATH=<project_root>/data ANNFILE_PATH=<project_root>/data CAFFE_TOOL_PATH=<caffe_root>/build/tools DATA_ROOT=<PATH_TO_imagenet_attrib/imagenet_attrib/cropped_to_bbox/>
 
 LMDB files will be created in <project_root>/data/
 
