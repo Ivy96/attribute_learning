@@ -522,8 +522,8 @@ if __name__ == '__main__':
     # model_weights = project_root + 'models/resnet_caffe_trial11_iter_6000.caffemodel'
 
     # DAN weights
-    #model_def = '/informatik2/students/home/4banik/PycharmProjects/attribute_learning1/out/attribute_trial1_deploy.prototxt'
-    #model_weights = '/informatik2/students/home/4banik/PycharmProjects/attribute_learning1/models/attribute_cropped_trial21_iter_7000.caffemodel'
+    model_def = '/informatik2/students/home/4banik/PycharmProjects/attribute_learning1/out/attribute_trial1_deploy.prototxt'
+    model_weights = '/informatik2/students/home/4banik/PycharmProjects/attribute_learning1/models/attribute_cropped_trial21_iter_7000.caffemodel'
     #model_weights = '/data_b/soubarna/models/dan_cropped_adam_trial11_iter_8000.caffemodel'
 
     # CAM weights
@@ -531,8 +531,8 @@ if __name__ == '__main__':
     #model_weights = '/data_b/soubarna/models/attribute_camnw2_trial11_iter_2000.caffemodel'
     
     # DAN finetuned apascal weights
-    model_def='/informatik2/students/home/4banik/workspace/attribute_attention/attribute_learning/out/dan_apascal_trial1_deploy.prototxt'
-    model_weights='/data_b/soubarna/models/dan_apascal_trial3/dan_apascal_trial32_iter_15000.caffemodel'   
+    # model_def='/informatik2/students/home/4banik/workspace/attribute_attention/attribute_learning/out/dan_apascal_trial1_deploy.prototxt'
+    # model_weights='/data_b/soubarna/models/dan_apascal_trial3/dan_apascal_trial32_iter_15000.caffemodel'   
      
     if os.path.isfile(model_weights):
         print 'model weights found.'
@@ -551,15 +551,15 @@ if __name__ == '__main__':
     transformer.set_mean('data', mu)  # subtract the dataset-mean value in each channel
     transformer.set_channel_swap('data', (2, 1, 0))  # required for PIL and caffe img, swap channels from RGB to BGR
     
-    #evaluate_classification(net, transformer, image_file=project_root + 'data/IA_X_test.txt',
-    #           label_file=project_root + 'data/IA_Y_test.txt',
-    #           plot_name='IA_CAM2', dim=25, ds='IA', rerun=False)
+    evaluate_classification(net, transformer, image_file=project_root + 'data/IA_X_test.txt',
+              label_file=project_root + 'data/IA_Y_test.txt',
+              plot_name='IA_TEST', dim=25, ds='IA', rerun=False)
 
 
     #evaluate_classification(net, transformer, image_file=project_root + 'data/apascal_test.txt',
     #                   label_file=project_root + 'data/apascal_test_labels_correct.txt',
     #                   plot_name='apascal_DAN', dim=25, ds='apascal', rerun=False, image_level=True)
     
-    evaluate_classification(net, transformer, image_file=project_root + 'data/apascal_X_val.txt',
-                       label_file=project_root + 'data/apascal_Y_val.txt',
-                       plot_name='apascal_dan_trial32_DA', dim=7, ds='apascal_finetuned', rerun=False, image_level=True)
+    # evaluate_classification(net, transformer, image_file=project_root + 'data/apascal_X_val.txt',
+    #                    label_file=project_root + 'data/apascal_Y_val.txt',
+    #                    plot_name='apascal_dan_trial32_DA', dim=7, ds='apascal_finetuned', rerun=False, image_level=True)
