@@ -78,7 +78,7 @@ Another guide for caffe installation : http://installing-caffe-the-right-way.wik
 
 # Prepare dataset:
 * Preprocessing image files
-```python prepare_data.py --data_root <PATH_TO_imagenet_attrib/imagenet_attrib/> --task 1```
+```python prepare_data.py --data_root <PATH_TO_imagenet_attrib/imagenet_attrib/> --dataset ia```
 
 train/val/test list files will be created in <project_root>/data/
 
