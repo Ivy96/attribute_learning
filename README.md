@@ -2,6 +2,7 @@
 Learns a model for object attribute classfication
 
 git clone https://github.com/baniks/attribute_learning.git
+
 cd attribute_learning
 
 # Dependencies:
