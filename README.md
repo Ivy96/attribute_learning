@@ -34,6 +34,7 @@ New layers: loss_weight_layer, multi_label_accuracy_layer, weighted_sigmoid_cros
 
 Follow the instruction from http://caffe.berkeleyvision.org/installation.html. 
 
+
 In short:
 ```
 git clone https://github.com/baniks/caffe-master.git
@@ -95,3 +96,7 @@ LMDB files will be created in <project_root>/data/
 python train_attribute_network.py
 ```
 
+# Testing (WIP):
+
+* Download trained model from [here](https://www.dropbox.com/sh/7yqdkrakazgf4kq/AABLrv9tB6eWCYsvfa6noSSNa?dl=0) and save in <project_root>/models
+* run code/evaluate_classification.py for evaluating precision, recall, map -**WIP:** (directory structure currently hard coded. needs to be changed in arguments format.)
