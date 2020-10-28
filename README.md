@@ -62,13 +62,13 @@ make pycaffe
 Another guide for caffe installation : http://installing-caffe-the-right-way.wikidot.com/start
 
 # Dataset:
-* Download Imagenet dataset from [here](http://image-net.org/index) for the [imagenet-attribute synsets](http://image-net.org/api/text/imagenet.attributes.obtain_synset_wordlist). Extract the images in a directory named "imagenet_attrib/orig".
+* Download Imagenet dataset from [here](http://image-net.org/index). Only the images for the [imagenet-attribute synsets](http://image-net.org/api/text/imagenet.attributes.obtain_synset_wordlist) are required. Extract the images in a directory named "imagenet_attrib/orig".
 * Download the attribute annotation file [attrann.mat](http://image-net.org/download-attributes).
 * Use the split_annotation function from project_root/code/prepare_data.py to split it into 4 smaller annotation files.
 
 # Prepare dataset:
 * Preprocessing image files
-`python prepare_data.py --data_root <PATH_TO_imagenet_attrib/imagenet_attrib/> --task 1`
+```python prepare_data.py --data_root <PATH_TO_imagenet_attrib/imagenet_attrib/> --task 1```
 
 train/val/test list files will be created in <project_root>/data/
 
