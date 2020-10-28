@@ -98,5 +98,6 @@ python train_attribute_network.py
 
 # Testing (WIP):
 
-* Download trained model from [here](https://www.dropbox.com/sh/7yqdkrakazgf4kq/AABLrv9tB6eWCYsvfa6noSSNa?dl=0) and save in <project_root>/models
-* run code/evaluate_classification.py for evaluating precision, recall, map -**WIP:** (directory structure currently hard coded. needs to be changed in arguments format.)
+* Download trained model definition `attribute_trial1_deploy.prototxt` and weight file `attribute_cropped_trial21_iter_7000.caffemodel` from [here](https://www.dropbox.com/sh/7yqdkrakazgf4kq/AABLrv9tB6eWCYsvfa6noSSNa?dl=0) and save in <project_root>/out and <project_root>/models directory respectively.     
+* run code/evaluate_classification.py for evaluating precision, recall, map 
+    * **WIP:** model prototxt, weight file and dataset name - pass as an argument. Currently they are hard coded in the script
