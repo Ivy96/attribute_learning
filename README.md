@@ -7,11 +7,11 @@ cd attribute_learning
 
 # Dependencies:
 ### create virtualenv
+```
 virtualenv -p /usr/bin/python2.7 venv_attrib
 source venv_attrib/bin/activate
 
-pip install numpy
-
+pip install numpy  
 pip install Pillow
 
 pip install scipy
@@ -23,7 +23,7 @@ pip install sklearn
 pip install lmdb
 
 pip install opencv-python==3.4.0.14
-
+```
 ### install caffe from [here](https://github.com/baniks/caffe-master.git)
 New layers: loss_weight_layer, multi_label_accuracy_layer, weighted_sigmoid_cross_entropy_loss_layer
 
@@ -43,20 +43,19 @@ PYTHON_INCLUDE := <PATH_TO_venv_attrib>/include/python2.7 \
     <PATH_TO_venv_attrib>/lib/python2.7/site-packages/numpy/core/include
 
 * Add path to hdf5 in INCLUDE_DIRS and LIBRARY_DIRS path  
-
-INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
-
+```
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/<br/>
 LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/ 
-
+```
 * Opencv requirement
-
+```
 OPENCV_VERSION := 3
-
+```
 * Make other necessary changes in Makefle.config for CPU/GPU use, and cuda.
-make clean
-
+```
+make clean<br/>
 make -j8 all
-
+```
 ### Install pycaffe 
 `cd <caffe-home/python>`
 `for req in $(cat requirements.txt); do pip install $req; done`
@@ -79,15 +78,14 @@ train/val/test list files will be created in <project_root>/data/
 preprocessed image will be saved in <PATH_TO_imagenet_attrib/imagenet_attrib/cropped_to_bbox>
 
 * Create data lmdb file
-
+```
 ./create_data_lmdb.sh DS=ia LMDBFILE_PATH=<project_root>/data ANNFILE_PATH=<project_root>/data CAFFE_TOOL_PATH=<caffe_root>/build/tools DATA_ROOT=<PATH_TO_imagenet_attrib/imagenet_attrib/cropped_to_bbox/>
-
+```
 LMDB files will be created in <project_root>/data/
 
 
 # Train model Deep Attribute Network (DAN)
-
+```
 python train_attribute_network.py
-
-
+```
 
